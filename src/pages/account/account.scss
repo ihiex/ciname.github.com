@@ -1,0 +1,65 @@
+page-account {
+  .title {
+    font-size: 18px;
+    padding-left: 25px;
+  }
+  .header-left {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 8px;
+    font-size: 18px;
+    text-align: center;
+  }
+  .light-bg {
+    background-color: #FFFFFF;
+  }
+
+  ion-content {
+    background-color: #E4E1E1;
+  }
+
+  .item {
+    background-color: #EFEFEF;
+  }
+
+  .telephone {
+    position: absolute;
+    right: 20px;
+    height: 20px;
+    width: 50px;
+    text-decoration: none;
+  }
+
+  .telephone {
+    float: right;
+    right: 40px;
+  }
+  .version {
+    float: right;
+    right: 5px;
+  }
+  .button {
+    height: 3rem;
+    background-color: #f53d3d;
+    border-radius: 1rem;
+    font-size: 2rem;
+  }
+  .content{
+    .item-left {
+      text-align: center;
+    }
+    .toparea {
+      div{
+        width:100%;
+        height:100%;
+        text-align: center;
+       }
+       .headImg{
+        width:16rem;
+        height:16rem;
+        border: 1px solid #f4f4f4;
+      }
+    }
+  }
+}

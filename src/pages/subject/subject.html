@@ -1,0 +1,36 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>详细信息页面</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="content">
+  <img [src]="imgSrc" alt="{{data?.title}}">
+
+  <h2>{{data?.title}}</h2>
+  <div>类型：
+    <span *ngFor="let gen of genres let i=index">
+          {{gen}} <span *ngIf="i<genres.length-1">、</span>
+        </span>
+  </div>
+  <div>导演：
+    <span *ngFor="let dir of directors let i=index">
+          {{dir.name}}<span *ngIf="i<directors.length-1">、</span>
+        </span>
+  </div>
+  <div>主演：
+    <span *ngFor="let casts of casts let i=index">
+          {{casts.name}}<span *ngIf="i<casts.length-1">、</span>
+        </span>
+  </div>
+  <div>地区：
+    <span *ngFor="let casts of countries let i=index">
+          {{casts}}<span *ngIf="i<countries.length-1">、</span>
+        </span>
+  </div>
+  <div>上映年份：{{data.year}}</div>
+  <br>
+  {{data.summary}}
+</ion-content>

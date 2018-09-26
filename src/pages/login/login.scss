@@ -1,0 +1,25 @@
+page-login {
+  .header .loginBtn{
+    float: right;
+    border:none;
+  }
+.content{
+  color: #000;
+  font-weight: 700;
+}
+  .content .inputbox>input{
+    width: 100%;
+    height: 2rem;
+  }
+  .content .loginBtn{
+    border:none;
+  }
+  .content .loginBtn .colorRed{
+    color: #f53d3d;
+    font-weight:800;
+  }
+  .content .login{
+    float: right;
+  }
+;
+}

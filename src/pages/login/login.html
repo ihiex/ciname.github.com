@@ -1,0 +1,44 @@
+
+<ion-header class="header">
+  <ion-navbar>
+    <ion-title>
+      <button class="loginBtn" ion-button color="danger" outline  (click)="showFun1()" *ngIf="!loginFlag">快速注册>> </button>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="content">
+  <ion-grid class="inputbox">
+    <ion-row>
+      <ion-col col-4><span>用户名：</span></ion-col>
+      <ion-col col-8><input type="text" [(ngModel)]="userName"></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4><span>密码：</span></ion-col>
+      <ion-col col-8><input type="password" [(ngModel)]="pwd"></ion-col>
+    </ion-row>
+    <ion-row *ngIf="loginFlag">
+      <ion-col col-4><span>确认密码：</span></ion-col>
+      <ion-col col-8><input type="password" [(ngModel)]="againPwd"></ion-col>
+    </ion-row>
+    <ion-row *ngIf="loginFlag">
+      <ion-col col-4><span>电话：</span></ion-col>
+      <ion-col col-8> <input type="phone" [(ngModel)]="phone"></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-item *ngIf="loginFlag">
+    <ion-label>我已阅读并同意相关服务条款和隐私政策</ion-label>
+    <ion-checkbox color="dark" checked="true" ></ion-checkbox>
+  </ion-item>
+
+    <ion-item>
+      <button ion-button color="danger" outline class="login" *ngIf="loginFlag" (click)="loginFun(0)">注册</button>
+      <button ion-button color="danger" outline class="login" *ngIf="!loginFlag" (click)="loginFun(1)">登录</button>
+    </ion-item>
+
+    <ion-item *ngIf="loginFlag">
+      <button class="loginBtn" ion-button color="dark" outline  (click)="showFun2()" >已有账号：<span class="colorRed">登录</span> </button>
+    </ion-item>
+
+</ion-content>

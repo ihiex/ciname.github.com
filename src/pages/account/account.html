@@ -1,0 +1,54 @@
+
+<ion-header>
+  <ion-navbar>
+    <div class="title">我的设置</div>
+    <!--<div class="header-left">-->
+      <!--<ion-icon name="ios-arrow-back"></ion-icon>-->
+    <!--</div>-->
+  </ion-navbar>
+</ion-header>
+
+<ion-content overflow-scroll="false" style="overflow: hidden" class="content">
+  <ion-item class="toparea">
+    <!--设定图片-->
+    <div (click)="presentActionSheet()">
+      <!--这个item前面加上一个?,是为了防止对象为空的情况报错-->
+      <img src="{{imagePath}}" alt=" " class="headImg">
+    </div>
+    <br>
+    <div>{{username}}的头像</div>
+  </ion-item>
+
+  <ion-list>
+    <ion-item>
+      账号信息
+    </ion-item>
+    <ion-item>
+      通用
+    </ion-item>
+    <ion-item>
+      关于影城
+    </ion-item>
+    <ion-item>
+      <ion-icon name="call"></ion-icon>
+      <label>联系我们</label>
+      <!--(click)="func_callPhone('88889999')"-->
+      <a class="telephone" href="tel:88889999">88889999</a>
+    </ion-item>
+    <ion-item>
+      <label>版本信息</label>
+      <span class="version">V1.0</span>
+    </ion-item>
+    <ion-item>
+
+    </ion-item>
+    <ion-item>
+
+    </ion-item>
+    <ion-item>
+        <button class="button button-block button-assertive " (click)="func_exitLogin()">退出登录</button>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
